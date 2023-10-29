@@ -101,7 +101,7 @@ function apply() {
 
 function destroy() {
   init
-  terraform -chdir="$TERRAFORM_ENV_HOME" destroy --auto-approve
+  terraform -chdir="$TERRAFORM_ENV_HOME" destroy -var-file=./conf/main.tfvars --auto-approve
 }
 
 function recreate() {
