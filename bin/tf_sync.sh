@@ -101,7 +101,7 @@ function apply() {
 
 function destroy() {
   init
-  terraform destroy --auto-approve
+  terraform -chdir="$TERRAFORM_ENV_HOME" destroy --auto-approve
 }
 
 function recreate() {
