@@ -129,6 +129,8 @@ elif [[ "$SMART_COMMIT_MESSAGES" = "enabled" && "$GITHUB_COMMIT_MESSAGE" == *"ac
   recreate
 elif [[ "$SMART_COMMIT_MESSAGES" = "enabled" || "$SMART_COMMIT_MESSAGES" = "disabled" ]]; then
   echo "Unknown commit message action provided: $GITHUB_COMMIT_MESSAGE. Available actions: [action: apply, action: destroy, action: re-create]"
+  exit 1
 else
   echo "Unknown action provided: $SMART_COMMIT_MESSAGES. Available actions: $AVAILABLE_ACTIONS"
+  exit 1
 fi
