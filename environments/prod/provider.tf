@@ -12,9 +12,9 @@ terraform {
     role_arn    = "arn:aws:iam::375158168967:role/terraform-state"
     external_id = "tf-admin"
 
-    key            = "dev/terraform.tfstate"
-    bucket         = "terraform-sandbox-dev-state"
-    dynamodb_table = "terraform-sandbox-dev-state-lock"
+    key            = "prod/terraform.tfstate"
+    bucket         = "terraform-sandbox-prod-state"
+    dynamodb_table = "terraform-sandbox-prod-state-lock"
     region         = "us-east-2"
     encrypt        = true
   }
