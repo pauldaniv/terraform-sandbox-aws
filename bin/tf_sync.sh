@@ -30,6 +30,7 @@ while [[ $# -gt 0 ]]; do
     ;;
   --dry-run)
     DRY_RUN=true
+    echo -e "${BIPurple}*Running in dry-run mode*${NC}"
     shift # past argument
     ;;
   -*)
